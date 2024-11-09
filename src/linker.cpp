@@ -24,7 +24,7 @@ Written:	11/13/09  Kenneth D. Pettit
 extern "C"
 {
 #include		"intelhex.h"
-char			path[512];
+static char		linkpath[512];
 }
 
 static const char *gLoaderCode[] = {
@@ -383,7 +383,7 @@ MString VTLinker::PreprocessDirectory(const char *pDir)
 	if (strncmp(pDir, "{$VT_ROOT}", 10) == 0)
 	{
 		// Substitute the VirtualT path
-		temp = path;
+		temp = linkpath;
 		temp += pDir[10];
 	}
 	else if (strncmp(pDir, "{$VT_PROJ}", 10) == 0)
