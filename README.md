@@ -54,7 +54,18 @@ Also on first start, the following directories will be created:
 
 The matching files from `./ROMs/` will be copied into the subdirectories;
 any missing ones on subsequent startups will attempt to be copied again
-from `./ROMs/` and a warning dialogue will be produced.
+from `./ROMs/` and a warning dialogue will be produced. If all the ROM
+images are present in their machine-specific subdirectories, the `./ROMs/`
+directory is not needed (though it may be needed again if you attempt to
+use the printer emulation).
+
+When you exit the emulator, the current RAM data appears to be saved
+in a `./…/RAM.bin` file in the machine-specific directory and reloaded
+when the emulator is restarted.
+
+The "Help » Help" function in the menu expects `./doc/help.html` to be
+present under the current directory. As with the ROM images, you can copy
+the `doc/` directory from the source distribution.
 
 
 
